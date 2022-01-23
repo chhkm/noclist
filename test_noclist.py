@@ -16,8 +16,8 @@ class TestNoclist(unittest.TestCase):
         """Tests get_auth_token()"""
         responses.add(
             responses.GET,
-            url=BASE_URL + '/auth',
-            status=200
+            url = BASE_URL + '/auth',
+            status = 200
         )
 
         response = requests.Response()
@@ -43,8 +43,8 @@ class TestNoclist(unittest.TestCase):
         """Tests get_users()"""
         responses.add(
             responses.GET,
-            url=BASE_URL + '/users',
-            status=200
+            url = BASE_URL + '/users',
+            status = 200
         )
 
         text = 'aaaaa\nbbbbb\nccccc'
@@ -69,8 +69,8 @@ class TestNoclist(unittest.TestCase):
         """Tests retry()"""
         responses.add(
             responses.GET,
-            url=BASE_URL + '/auth',
-            status=400
+            url = BASE_URL + '/auth',
+            status = 400
         )
 
         url = BASE_URL + '/auth'
